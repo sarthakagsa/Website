@@ -28,6 +28,10 @@
         <a class="nav-link" href="Category.html">Add Category</a>
       </li>
     </ul>
+     </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"> Logout</a></li>
+    </ul>
   </div>
 </nav>
 <!----------------------Vendor----------------list------------------------->
@@ -35,31 +39,6 @@
   <h3 class="text-secondary">Add Brand</h3>
 </div>
 <!--------------------------------ADD BRAND------------------------------------------>
-<div class="container"style="max-width: 700px; margin-top: 2%">
-
-        <form method="POST" action="/admin/product">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div id="inputFormRow">
-                        <div class="input-group mb-3"> 
-                            <input type="text" name="brand" class="form-control m-input" placeholder="Enter title" autocomplete="off">
-                            <div class="input-group-append">
-                                <button id="removeRow" type="button" class="btn btn-danger">Remove</button>
-                            </div>
-                        </div>
-                    </div>
-
-              <div id="newRow"></div>
-                 <button id="addRow" type="button" class="btn btn-primary">Add Row</button>
-                  <button class="btn btn-primary container" style="margin-top: 2%">Submit</button>
-              </div>
-            </div>
-        </form>
-    </div>
-    <div class="container text-center" style="margin-top: 2%">
-      <h3 class="text-secondary"> Existing Brands</h3>
-    </div>
 
     <!--------------------------Table------------------------>
     <table class="table table-hover table-responsive-sm text-center" style="margin-top: 2%">
@@ -76,27 +55,6 @@
     </tr>
   </tbody>
 </table>
-
-    <script type="text/javascript">
-        // add row
-        $("#addRow").click(function () {
-            var html = '';
-            html += '<div id="inputFormRow">';
-            html += '<div class="input-group mb-3">';
-            html += '<input type="text" name="brand" class="form-control m-input" placeholder="Enter title" autocomplete="off">';
-            html += '<div class="input-group-append">';
-            html += '<button id="removeRow" type="button" class="btn btn-danger">Remove</button>';
-            html += '</div>';
-            html += '</div>';
-
-            $('#newRow').append(html);
-        });
-
-        // remove row
-        $(document).on('click', '#removeRow', function () {
-            $(this).closest('#inputFormRow').remove();
-        });
-    </script>
 
 
 
